@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MMVK Chaat & Fast Food, Pollachi — offline menu and prices.">
+<title>MMVK Chaat & Fast Food | Offline Menu</title>
+<style>
+:root{--blue:#155eef;--yellow:#ffc107;--ink:#172033;--muted:#667085;--bg:#fffaf2;--card:#fff;--line:#eee4d5}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(135deg,#111827,#155eef);color:#fff;padding:28px 18px 24px;text-align:center}
+h1{margin:0;font-size:28px}header p{margin:7px 0 0;opacity:.9}
+.wrap{max-width:720px;margin:auto;padding:16px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 18px}
+.btn{display:block;text-align:center;padding:13px;border-radius:12px;text-decoration:none;font-weight:700}
+.visit{background:#fff;border:1px solid #ddd;color:var(--ink)}.order{background:var(--blue);color:#fff}
+.notice{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 14px;margin-bottom:16px;font-size:14px;color:#555}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;margin:12px 0;overflow:hidden}
+section h2{font-size:19px;margin:0;padding:14px 16px;background:#fff4cf}
+.item{display:flex;justify-content:space-between;gap:15px;padding:13px 16px;border-top:1px solid #f1ece3}
+.item span:first-child{font-weight:600}.price{font-weight:800;white-space:nowrap}
+.combo h2{background:#e8f0ff}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:22px 8px 35px}
+@media(max-width:420px){h1{font-size:24px}.actions{grid-template-columns:1fr}.wrap{padding:12px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>MMVK Chaat & Fast Food</h1>
+  <p>Pollachi • Offline / Dine-in Menu</p>
+</header>
+<main class="wrap">
+  <div class="actions">
+    <a class="btn visit" href="tel:09384761099">📞 Call MMVK</a>
+    <a class="btn order" href="https://www.google.com/search?q=MMVK+Chaat+%26+Fast+Food+Pollachi">📍 Get Directions</a>
+  </div>
+  <div class="notice"><b>Offline prices shown here.</b> Delivery-platform prices may be different because of platform fees and offers.</div>
+
+  <section><h2>🥣 Chaat</h2>
+    <div class="item"><span>Paani Poori</span><span class="price">₹40</span></div>
+    <div class="item"><span>Bhel Poori</span><span class="price">₹40</span></div>
+    <div class="item"><span>Masala Poori</span><span class="price">₹45</span></div>
+    <div class="item"><span>Kaalaan</span><span class="price">₹40</span></div>
+    <div class="item"><span>Egg Kaalaan</span><span class="price">₹50</span></div>
+  </section>
+
+  <section><h2>🍚 Rice & Noodles</h2>
+    <div class="item"><span>Veg Fried Rice</span><span class="price">₹70</span></div>
+    <div class="item"><span>Egg Fried Rice</span><span class="price">₹80</span></div>
+    <div class="item"><span>Chicken Fried Rice</span><span class="price">₹100</span></div>
+    <div class="item"><span>Veg Noodles</span><span class="price">₹70</span></div>
+    <div class="item"><span>Egg Noodles</span><span class="price">₹80</span></div>
+    <div class="item"><span>Chicken Noodles</span><span class="price">₹100</span></div>
+    <div class="item"><span>Mushroom Rice / Noodles</span><span class="price">₹90</span></div>
+    <div class="item"><span>Chilli Parotta</span><span class="price">₹80</span></div>
+  </section>
+
+  <section><h2>🍗 Starters & Snacks</h2>
+    <div class="item"><span>Chicken 65 — Bone, 100 g</span><span class="price">₹60</span></div>
+    <div class="item"><span>Chicken 65 — Boneless, 100 g</span><span class="price">₹70</span></div>
+    <div class="item"><span>Veg Cutlet</span><span class="price">₹30</span></div>
+    <div class="item"><span>Veg Roll</span><span class="price">₹30</span></div>
+    <div class="item"><span>Chicken Roll</span><span class="price">₹40</span></div>
+  </section>
+
+  <section><h2>🥤 Mojitos & Sarbath</h2>
+    <div class="item"><span>Blue Curacao Mojito</span><span class="price">₹60</span></div>
+    <div class="item"><span>Strawberry Mojito</span><span class="price">₹60</span></div>
+    <div class="item"><span>Plain Nannari Sarbath</span><span class="price">₹30</span></div>
+    <div class="item"><span>Soda Nannari Sarbath</span><span class="price">₹40</span></div>
+  </section>
+
+  <section class="combo"><h2>🔥 Value Combos</h2>
+    <div class="item"><span>Egg Rice / Noodles + Soda Nannari Sarbath</span><span class="price">₹100</span></div>
+    <div class="item"><span>Chicken Rice / Noodles + Soda Nannari Sarbath</span><span class="price">₹130</span></div>
+    <div class="item"><span>Chicken Rice / Noodles + Plain Nannari Sarbath</span><span class="price">₹120</span></div>
+  </section>
+
+  <footer>
+    MMVK Chaat & Fast Food • Kumaran Street, 62, Palladam Road, Marapettai, Pollachi, Tamil Nadu 642001<br>
+    Call: 093847 61099
+  </footer>
+</main>
+</body>
+</html>
