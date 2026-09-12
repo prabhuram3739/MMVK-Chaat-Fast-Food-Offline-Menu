@@ -1498,724 +1498,208 @@ body{
     </div>
 
 
-     var(--bg);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
-}
+    <!-- EGG MAGGIE -->
 
-/* =========================
-   MAIN CONTAINER
-========================= */
+    <div
+      class="menu-item"
+      data-search="egg maggie">
 
-.container{
-  width:min(1180px,100%);
-  margin:auto;
-  padding:0 22px 45px;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-.header{
-  padding:25px 0 22px;
-  display:flex;
-  align-items:center;
-  gap:25px;
-}
-
-.brand{
-  flex:1;
-}
-
-.brand-name{
-  font-size:38px;
-  font-weight:900;
-  letter-spacing:-1.5px;
-}
-
-.brand-name span{
-  color:var(--red);
-}
-
-.brand-sub{
-  margin-top:3px;
-  color:#c7c9cc;
-  font-size:14px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-/* =========================
-   SEARCH
-========================= */
-
-.search-box{
-  width:370px;
-  position:relative;
-}
-
-.search-box input{
-  width:100%;
-  height:56px;
-  border-radius:30px;
-  border:1px solid #363a40;
-  background:#171a1d;
-  color:white;
-  padding:0 22px 0 53px;
-  font-size:16px;
-  outline:none;
-}
-
-.search-box input:focus{
-  border-color:var(--red);
-}
-
-.search-icon{
-  position:absolute;
-  left:19px;
-  top:15px;
-  font-size:23px;
-}
-
-/* =========================
-   MENU BUTTON
-========================= */
-
-.menu-btn{
-  background:var(--red);
-  color:white;
-  text-decoration:none;
-  padding:16px 25px;
-  border-radius:30px;
-  font-size:17px;
-  font-weight:800;
-  white-space:nowrap;
-}
-
-/* =========================
-   ACTION BUTTONS
-========================= */
-
-.actions{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin:10px 0 25px;
-}
-
-.action{
-  min-height:58px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  color:white;
-  background:var(--card);
-  font-size:16px;
-  font-weight:800;
-  transition:.2s;
-}
-
-.action:hover{
-  transform:translateY(-2px);
-  border-color:#555b63;
-}
-
-.action.whatsapp{
-  background:#168f48;
-  border-color:#168f48;
-}
-
-.action.directions{
-  background:#155bd5;
-  border-color:#155bd5;
-}
-
-.action.online{
-  background:var(--red);
-  border-color:var(--red);
-}
-
-/* =========================
-   OFFLINE NOTICE
-========================= */
-
-.notice{
-  background:#171a1d;
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:14px 18px;
-  color:#bfc3c8;
-  font-size:14px;
-  margin-bottom:25px;
-}
-
-.notice strong{
-  color:white;
-}
-
-/* =========================
-   CATEGORY NAVIGATION
-========================= */
-
-.category-title{
-  font-size:18px;
-  font-weight:800;
-  margin-bottom:13px;
-}
-
-.categories{
-  display:flex;
-  gap:14px;
-  overflow-x:auto;
-  padding-bottom:10px;
-  scrollbar-width:none;
-}
-
-.categories::-webkit-scrollbar{
-  display:none;
-}
-
-.category{
-  flex:0 0 155px;
-  height:145px;
-  border:1px solid var(--line);
-  background:
-    linear-gradient(145deg,#191c20,#111315);
-  border-radius:20px;
-  text-decoration:none;
-  color:white;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:12px;
-  transition:.2s;
-}
-
-.category:hover{
-  transform:translateY(-3px);
-  border-color:#555b63;
-}
-
-.category.active{
-  border:2px solid var(--red);
-}
-
-.category-icon{
-  font-size:40px;
-  margin-bottom:9px;
-}
-
-.category-name{
-  font-size:15px;
-  font-weight:800;
-  line-height:1.25;
-}
-
-.category.fire{
-  background:
-    radial-gradient(circle at center,rgba(239,51,64,.16),transparent 60%),
-    #17191c;
-}
-
-.category.combo{
-  background:
-    radial-gradient(circle at center,rgba(245,197,66,.12),transparent 60%),
-    #17191c;
-}
-
-.category.drink{
-  background:
-    radial-gradient(circle at center,rgba(32,184,90,.12),transparent 60%),
-    #17191c;
-}
-
-/* =========================
-   CATEGORY HERO CARDS
-========================= */
-
-.menu-section{
-  margin-top:28px;
-  scroll-margin-top:20px;
-}
-
-.section-banner{
-  position:relative;
-  min-height:145px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:
-    linear-gradient(90deg,
-      #111315 0%,
-      rgba(17,19,21,.94) 35%,
-      rgba(17,19,21,.55) 70%,
-      rgba(17,19,21,.25) 100%);
-  display:flex;
-  align-items:center;
-  padding:28px 38px;
-}
-
-.section-banner::after{
-  content:"";
-  position:absolute;
-  right:0;
-  top:0;
-  width:48%;
-  height:100%;
-  background:
-    radial-gradient(circle at center,
-      rgba(239,51,64,.16),
-      transparent 62%);
-  pointer-events:none;
-}
-
-.section-content{
-  position:relative;
-  z-index:2;
-  max-width:65%;
-}
-
-.section-content h2{
-  margin:0;
-  font-family:Georgia,serif;
-  font-size:31px;
-}
-
-.section-content p{
-  margin:8px 0 0;
-  color:#bfc3c7;
-  font-size:16px;
-}
-
-.view-all{
-  position:absolute;
-  right:18px;
-  bottom:18px;
-  z-index:4;
-  background:var(--red);
-  color:white;
-  border:0;
-  border-radius:25px;
-  padding:11px 18px;
-  font-size:14px;
-  font-weight:800;
-  cursor:pointer;
-}
-
-/* =========================
-   MENU ITEMS
-========================= */
-
-.menu-items{
-  margin-top:8px;
-  background:#121416;
-  border:1px solid var(--line);
-  border-radius:16px;
-  overflow:hidden;
-}
-
-.menu-item{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  padding:18px 20px;
-  border-bottom:1px solid #292d31;
-}
-
-.menu-item:last-child{
-  border-bottom:0;
-}
-
-.menu-item:hover{
-  background:#191c20;
-}
-
-.item-name{
-  font-size:16px;
-  font-weight:600;
-}
-
-.item-price{
-  font-size:17px;
-  font-weight:900;
-  white-space:nowrap;
-}
-
-.popular{
-  background:
-    linear-gradient(90deg,
-      rgba(239,51,64,.08),
-      transparent);
-}
-
-.badge{
-  display:inline-block;
-  margin-left:8px;
-  padding:4px 8px;
-  border-radius:12px;
-  background:#422126;
-  color:#ff8790;
-  font-size:9px;
-  font-weight:900;
-  vertical-align:middle;
-}
-
-/* =========================
-   NO RESULTS
-========================= */
-
-.no-results{
-  display:none;
-  text-align:center;
-  padding:35px;
-  color:#aaa;
-  border:1px solid var(--line);
-  border-radius:16px;
-  margin-top:20px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer{
-  text-align:center;
-  color:#999fa5;
-  padding:45px 15px 10px;
-  font-size:14px;
-}
-
-.footer-line{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:15px;
-  margin-bottom:14px;
-}
-
-.footer-line span{
-  width:32px;
-  height:1px;
-  background:var(--red);
-}
-
-.footer strong{
-  color:white;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:700px){
-
-  .container{
-    padding:0 15px 35px;
-  }
-
-  .header{
-    display:block;
-    padding-top:20px;
-  }
-
-  .brand-name{
-    font-size:30px;
-  }
-
-  .brand-sub{
-    font-size:11px;
-  }
-
-  .search-box{
-    width:100%;
-    margin-top:18px;
-  }
-
-  .menu-btn{
-    display:none;
-  }
-
-  .actions{
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-    margin-top:18px;
-  }
-
-  .action{
-    min-height:62px;
-    font-size:15px;
-    border-radius:15px;
-  }
-
-  .category{
-    flex-basis:135px;
-    height:125px;
-  }
-
-  .category-icon{
-    font-size:34px;
-  }
-
-  .category-name{
-    font-size:14px;
-  }
-
-  .section-banner{
-    min-height:135px;
-    padding:23px 20px;
-  }
-
-  .section-content{
-    max-width:100%;
-    padding-right:20px;
-  }
-
-  .section-content h2{
-    font-size:25px;
-  }
-
-  .section-content p{
-    font-size:14px;
-  }
-
-  .view-all{
-    right:12px;
-    bottom:12px;
-    padding:9px 13px;
-    font-size:12px;
-  }
-
-  .menu-item{
-    padding:16px 14px;
-  }
-
-  .item-name{
-    font-size:15px;
-  }
-
-  .item-price{
-    font-size:16px;
-  }
-}
-</style>
-</head>
-
-
-<body>
-
-<div class="container">
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header class="header">
-
-  <div class="brand">
-    <div class="brand-name">
-      🔥 <span>MMVK</span>
-    </div>
-
-    <div class="brand-sub">
-      Chaat & Fast Food • Pollachi
-    </div>
-  </div>
-
-  <div class="search-box">
-    <span class="search-icon">🔎</span>
-
-    <input
-      type="search"
-      id="searchInput"
-      placeholder="Search for dishes..."
-      autocomplete="off"
-    >
-  </div>
-
-  <a href="#menu" class="menu-btn">
-    🍴 Menu
-  </a>
-
-</header>
-
-
-<!-- =========================
-     ACTION BUTTONS
-========================= -->
-
-<div class="actions">
-
-  <a
-    class="action"
-    href="tel:+919384761099">
-    📞 Call MMVK
-  </a>
-
-  <a
-    class="action whatsapp"
-    href="https://wa.me/919384761099?text=Hi%20MMVK%2C%20I%20would%20like%20to%20know%20today%27s%20menu."
-    target="_blank">
-    💬 WhatsApp
-  </a>
-
-  <a
-    class="action directions"
-    href="https://www.google.com/maps/search/?api=1&query=MMVK+Chaat+%26+Fast+Food%2C+62+Kumaran+Street%2C+Palladam+Road%2C+Marapettai%2C+Pollachi%2C+Tamil+Nadu+642001"
-    target="_blank">
-    📍 Directions
-  </a>
-
-  <a
-    class="action online"
-    href="https://www.google.com/search?q=MMVK+Chaat+%26+Fast+Food+Pollachi+order+online"
-    target="_blank">
-    🛵 Order Online
-  </a>
-
-</div>
-
-
-<!-- =========================
-     PRICE NOTICE
-========================= -->
-
-<div class="notice">
-  <strong>Offline prices shown here.</strong>
-  Delivery-platform prices may be different because of platform fees and offers.
-</div>
-
-
-<!-- =========================
-     CATEGORY NAVIGATION
-========================= -->
-
-<div id="menu">
-
-  <div class="category-title">
-    Explore Menu
-  </div>
-
-  <div class="categories">
-
-    <a href="#rice" class="category active">
-      <div class="category-icon">🍚</div>
-      <div class="category-name">
-        Fried Rice<br>& Noodles
-      </div>
-    </a>
-
-    <a href="#starters" class="category">
-      <div class="category-icon">🍗</div>
-      <div class="category-name">
-        Starters
-      </div>
-    </a>
-
-    <a href="#korean" class="category fire">
-      <div class="category-icon">🔥</div>
-      <div class="category-name">
-        Korean Fire
-      </div>
-    </a>
-
-    <a href="#chaat" class="category">
-      <div class="category-icon">🥣</div>
-      <div class="category-name">
-        Snacks<br>& Chaat
-      </div>
-    </a>
-
-    <a href="#combos" class="category combo">
-      <div class="category-icon">💰</div>
-      <div class="category-name">
-        Best Value<br>Combo
-      </div>
-    </a>
-
-    <a href="#drinks" class="category drink">
-      <div class="category-icon">🥤</div>
-      <div class="category-name">
-        Drinks<br>(Beverages)
-      </div>
-    </a>
-
-  </div>
-
-</div>
-
-
-<div id="noResults" class="no-results">
-  No menu items found.
-</div>
-
-
-<!-- =========================
-     1. FRIED RICE & NOODLES
-========================= -->
-
-<section class="menu-section" id="rice">
-
-  <div class="section-banner">
-
-    <div class="section-content">
-      <h2>Fried Rice and Noodles</h2>
-      <p>Deliciously wok-tossed Chinese classics</p>
-    </div>
-
-    <button class="view-all" onclick="scrollToSection('rice')">
-      View All →
-    </button>
-
-  </div>
-
-  <div class="menu-items">
-
-    <div class="menu-item" data-search="veg fried rice">
-      <div class="item-name">Veg Fried Rice</div>
-      <div class="item-price">₹70</div>
-    </div>
-
-    <div class="menu-item" data-search="egg fried rice">
-      <div class="item-name">Egg Fried Rice</div>
-      <div class="item-price">₹80</div>
-    </div>
-
-    <div class="menu-item popular" data-search="chicken fried rice">
       <div class="item-name">
-        Chicken Fried Rice
-        <span class="badge">POPULAR</span>
+        Egg Maggie
       </div>
-      <div class="item-price">₹100</div>
+
+      <div class="item-price">
+        ₹70
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="veg noodles">
-      <div class="item-name">Veg Noodles</div>
-      <div class="item-price">₹70</div>
-    </div>
 
-    <div class="menu-item" data-search="egg noodles">
-      <div class="item-name">Egg Noodles</div>
-      <div class="item-price">₹80</div>
-    </div>
+    <!-- CHICKEN RICE -->
 
-    <div class="menu-item popular" data-search="chicken noodles">
+    <div
+      class="menu-item popular"
+      data-search="chicken rice">
+
       <div class="item-name">
+
+        Chicken Rice
+
+        <span class="badge">
+          POPULAR
+        </span>
+
+      </div>
+
+      <div class="item-price">
+        ₹120
+      </div>
+
+    </div>
+
+
+    <!-- CHICKEN RICE HALF -->
+
+    <div
+      class="menu-item"
+      data-search="chicken rice half 1/2">
+
+      <div class="item-name">
+        Chicken Rice — 1/2
+      </div>
+
+      <div class="item-price">
+        ₹60
+      </div>
+
+    </div>
+
+
+    <!-- CHICKEN NOODLES -->
+
+    <div
+      class="menu-item popular"
+      data-search="chicken noodles">
+
+      <div class="item-name">
+
         Chicken Noodles
-        <span class="badge">POPULAR</span>
+
+        <span class="badge">
+          POPULAR
+        </span>
+
       </div>
-      <div class="item-price">₹100</div>
+
+      <div class="item-price">
+        ₹120
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="mushroom rice noodles">
-      <div class="item-name">Mushroom Rice / Noodles</div>
-      <div class="item-price">₹90</div>
+
+    <!-- CHICKEN NOODLES HALF -->
+
+    <div
+      class="menu-item"
+      data-search="chicken noodles half 1/2">
+
+      <div class="item-name">
+        Chicken Noodles — 1/2
+      </div>
+
+      <div class="item-price">
+        ₹60
+      </div>
+
+    </div>
+
+
+    <!-- MUSHROOM RICE -->
+
+    <div
+      class="menu-item"
+      data-search="mushroom rice">
+
+      <div class="item-name">
+        Mushroom Rice
+      </div>
+
+      <div class="item-price">
+        ₹100
+      </div>
+
+    </div>
+
+
+    <!-- MUSHROOM NOODLES -->
+
+    <div
+      class="menu-item"
+      data-search="mushroom noodles">
+
+      <div class="item-name">
+        Mushroom Noodles
+      </div>
+
+      <div class="item-price">
+        ₹100
+      </div>
+
+    </div>
+
+
+    <!-- VEG RICE OR NOODLES -->
+
+    <div
+      class="menu-item"
+      data-search="veg rice or noodles">
+
+      <div class="item-name">
+        Veg Rice or Noodles
+      </div>
+
+      <div class="item-price">
+        ₹120
+      </div>
+
+    </div>
+
+
+    <!-- EGG RICE OR NOODLES -->
+
+    <div
+      class="menu-item"
+      data-search="egg rice or noodles">
+
+      <div class="item-name">
+        Egg Rice or Noodles
+      </div>
+
+      <div class="item-price">
+        ₹130
+      </div>
+
+    </div>
+
+
+    <!-- CHICKEN RICE OR NOODLES -->
+
+    <div
+      class="menu-item popular"
+      data-search="chicken rice or noodles">
+
+      <div class="item-name">
+
+        Chicken Rice or Noodles
+
+        <span class="badge">
+          POPULAR
+        </span>
+
+      </div>
+
+      <div class="item-price">
+        ₹150
+      </div>
+
+    </div>
+
+
+    <!-- MUSHROOM RICE OR NOODLES -->
+
+    <div
+      class="menu-item"
+      data-search="mushroom rice or noodles">
+
+      <div class="item-name">
+        Mushroom Rice or Noodles
+      </div>
+
+      <div class="item-price">
+        ₹140
+      </div>
+
     </div>
 
   </div>
@@ -2223,41 +1707,172 @@ body{
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      2. STARTERS
-========================= -->
+===================================================== -->
 
-<section class="menu-section" id="starters">
+<section
+  class="menu-section"
+  id="starters">
 
-  <div class="section-banner">
+
+  <div class="section-banner starters">
 
     <div class="section-content">
-      <h2>Starters</h2>
-      <p>Crispy, flavorful and perfect to begin with</p>
+
+      <h2>
+        Starters
+      </h2>
+
+      <p>
+        Crispy, flavorful and perfect to begin with
+      </p>
+
     </div>
 
-    <button class="view-all" onclick="scrollToSection('starters')">
+
+    <button
+      class="view-all"
+      onclick="scrollToSection('starters')">
+
       View All →
+
     </button>
 
   </div>
 
+
   <div class="menu-items">
 
-    <div class="menu-item popular" data-search="chicken 65 bone">
+
+    <!-- CHICKEN 65 BONE -->
+
+    <div
+      class="menu-item popular"
+      data-search="chicken 65 bone">
+
       <div class="item-name">
+
         Chicken 65 — Bone, 100 g
-        <span class="badge">POPULAR</span>
+
+        <span class="badge">
+          POPULAR
+        </span>
+
       </div>
-      <div class="item-price">₹60</div>
+
+      <div class="item-price">
+        ₹80
+      </div>
+
     </div>
 
-    <div class="menu-item popular" data-search="chicken 65 boneless">
+
+    <!-- CHICKEN 65 BONELESS -->
+
+    <div
+      class="menu-item popular"
+      data-search="chicken 65 boneless">
+
       <div class="item-name">
+
         Chicken 65 — Boneless, 100 g
-        <span class="badge">POPULAR</span>
+
+        <span class="badge">
+          POPULAR
+        </span>
+
       </div>
-      <div class="item-price">₹70</div>
+
+      <div class="item-price">
+        ₹100
+      </div>
+
+    </div>
+
+
+    <!-- GOBI 65 -->
+
+    <div
+      class="menu-item"
+      data-search="gobi 65">
+
+      <div class="item-name">
+        Gobi 65
+      </div>
+
+      <div class="item-price">
+        ₹70
+      </div>
+
+    </div>
+
+
+    <!-- MUSHROOM 65 -->
+
+    <div
+      class="menu-item"
+      data-search="mushroom 65">
+
+      <div class="item-name">
+        Mushroom 65
+      </div>
+
+      <div class="item-price">
+        ₹80
+      </div>
+
+    </div>
+
+
+    <!-- BONELESS CHILLI CHICKEN -->
+
+    <div
+      class="menu-item"
+      data-search="boneless chilli chicken">
+
+      <div class="item-name">
+        Boneless Chilli Chicken
+      </div>
+
+      <div class="item-price">
+        ₹100
+      </div>
+
+    </div>
+
+
+    <!-- BREAD CHANNA -->
+
+    <div
+      class="menu-item"
+      data-search="bread channa bread chana">
+
+      <div class="item-name">
+        Bread Channa
+      </div>
+
+      <div class="item-price">
+        ₹40
+      </div>
+
+    </div>
+
+
+    <!-- EGG PORIYAL -->
+
+    <div
+      class="menu-item"
+      data-search="egg poriyal">
+
+      <div class="item-name">
+        Egg Poriyal
+      </div>
+
+      <div class="item-price">
+        ₹25
+      </div>
+
     </div>
 
   </div>
@@ -2265,75 +1880,173 @@ body{
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      3. KOREAN FIRE
-========================= -->
+===================================================== -->
 
-<section class="menu-section" id="korean">
+<section
+  class="menu-section korean-section"
+  id="korean">
 
-  <div class="section-banner">
+
+  <div class="section-banner korean">
 
     <div class="section-content">
-      <h2>🔥 Korean Fire</h2>
-      <p>Bold. Spicy. Irresistible.</p>
+
+      <h2>
+        Korean Fire
+      </h2>
+
+      <p>
+        Bold. Spicy. Irresistible.
+      </p>
+
     </div>
 
-    <button class="view-all" onclick="scrollToSection('korean')">
+
+    <button
+      class="view-all"
+      onclick="scrollToSection('korean')">
+
       View All →
+
     </button>
 
   </div>
 
+
   <div class="menu-items">
 
-    <div class="menu-item popular" data-search="korean fire chicken rice">
-      <div class="item-name">
-        Korean Fire Chicken Rice
-        <span class="badge">POPULAR</span>
-      </div>
-      <div class="item-price">₹120</div>
-    </div>
 
-    <div class="menu-item popular" data-search="korean fire chicken noodles">
+    <div
+      class="menu-item popular"
+      data-search="korean fire chicken noodles">
+
       <div class="item-name">
+
         Korean Fire Chicken Noodles
-        <span class="badge">POPULAR</span>
+
+        <span class="badge">
+          POPULAR
+        </span>
+
       </div>
-      <div class="item-price">₹120</div>
+
+      <div class="item-price">
+        ₹120
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="korean fire egg rice">
-      <div class="item-name">Korean Fire Egg Rice</div>
-      <div class="item-price">₹110</div>
+
+    <div
+      class="menu-item popular"
+      data-search="korean fire chicken rice">
+
+      <div class="item-name">
+
+        Korean Fire Chicken Rice
+
+        <span class="badge">
+          POPULAR
+        </span>
+
+      </div>
+
+      <div class="item-price">
+        ₹120
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="korean fire egg noodles">
-      <div class="item-name">Korean Fire Egg Noodles</div>
-      <div class="item-price">₹110</div>
+
+    <div
+      class="menu-item"
+      data-search="korean fire egg noodles">
+
+      <div class="item-name">
+        Korean Fire Egg Noodles
+      </div>
+
+      <div class="item-price">
+        ₹110
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="korean fire veg rice">
-      <div class="item-name">Korean Fire Veg Rice</div>
-      <div class="item-price">₹100</div>
+
+    <div
+      class="menu-item"
+      data-search="korean fire egg rice">
+
+      <div class="item-name">
+        Korean Fire Egg Rice
+      </div>
+
+      <div class="item-price">
+        ₹110
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="korean fire veg noodles">
-      <div class="item-name">Korean Fire Veg Noodles</div>
-      <div class="item-price">₹100</div>
+
+    <div
+      class="menu-item"
+      data-search="korean fire veg noodles">
+
+      <div class="item-name">
+        Korean Fire Veg Noodles
+      </div>
+
+      <div class="item-price">
+        ₹100
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="korean fire chicken 65 bone">
+
+    <div
+      class="menu-item"
+      data-search="korean fire veg rice">
+
+      <div class="item-name">
+        Korean Fire Veg Rice
+      </div>
+
+      <div class="item-price">
+        ₹100
+      </div>
+
+    </div>
+
+
+    <div
+      class="menu-item"
+      data-search="korean fire chicken 65 bone">
+
       <div class="item-name">
         Korean Fire Chicken 65 — Bone, 100 g
       </div>
-      <div class="item-price">₹100</div>
+
+      <div class="item-price">
+        ₹100
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="korean fire chicken 65 boneless">
+
+    <div
+      class="menu-item"
+      data-search="korean fire chicken 65 boneless">
+
       <div class="item-name">
         Korean Fire Chicken 65 — Boneless, 100 g
       </div>
-      <div class="item-price">₹110</div>
+
+      <div class="item-price">
+        ₹110
+      </div>
+
     </div>
 
   </div>
@@ -2341,53 +2054,137 @@ body{
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      4. SNACKS & CHAAT
-========================= -->
+===================================================== -->
 
-<section class="menu-section" id="chaat">
+<section
+  class="menu-section"
+  id="chaat">
 
-  <div class="section-banner">
+
+  <div class="section-banner chaat">
 
     <div class="section-content">
-      <h2>Snacks and Chaat</h2>
-      <p>Street-style favourites, always a good idea</p>
+
+      <h2>
+        Snacks and Chaat
+      </h2>
+
+      <p>
+        Street-style favourites, always a good idea
+      </p>
+
     </div>
 
-    <button class="view-all" onclick="scrollToSection('chaat')">
+
+    <button
+      class="view-all"
+      onclick="scrollToSection('chaat')">
+
       View All →
+
     </button>
 
   </div>
 
+
   <div class="menu-items">
 
-    <div class="menu-item popular" data-search="paani poori pani puri">
+
+    <div
+      class="menu-item popular"
+      data-search="paani poori pani puri">
+
       <div class="item-name">
+
         Paani Poori
-        <span class="badge">POPULAR</span>
+
+        <span class="badge">
+          POPULAR
+        </span>
+
       </div>
-      <div class="item-price">₹40</div>
+
+      <div class="item-price">
+        ₹50
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="bhel poori">
-      <div class="item-name">Bhel Poori</div>
-      <div class="item-price">₹40</div>
+
+    <div
+      class="menu-item"
+      data-search="bhel poori">
+
+      <div class="item-name">
+        Bhel Poori
+      </div>
+
+      <div class="item-price">
+        ₹50
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="masala poori">
-      <div class="item-name">Masala Poori</div>
-      <div class="item-price">₹50</div>
+
+    <div
+      class="menu-item"
+      data-search="masala poori">
+
+      <div class="item-name">
+        Masala Poori
+      </div>
+
+      <div class="item-price">
+        ₹50
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="kaalaan">
-      <div class="item-name">Kaalaan</div>
-      <div class="item-price">₹40</div>
+
+    <div
+      class="menu-item"
+      data-search="kaalaan">
+
+      <div class="item-name">
+        Kaalaan
+      </div>
+
+      <div class="item-price">
+        ₹50
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="egg kaalaan">
-      <div class="item-name">Egg Kaalaan</div>
-      <div class="item-price">₹50</div>
+
+    <div
+      class="menu-item"
+      data-search="egg kaalaan">
+
+      <div class="item-name">
+        Egg Kaalaan
+      </div>
+
+      <div class="item-price">
+        ₹60
+      </div>
+
+    </div>
+
+
+    <div
+      class="menu-item"
+      data-search="kaalaan bhel poori mix">
+
+      <div class="item-name">
+        Kaalaan + Bhel Poori Mix
+      </div>
+
+      <div class="item-price">
+        ₹60
+      </div>
+
     </div>
 
   </div>
@@ -2395,51 +2192,119 @@ body{
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      5. BEST VALUE COMBO
-========================= -->
+===================================================== -->
 
-<section class="menu-section" id="combos">
+<section
+  class="menu-section combo-section"
+  id="combos">
 
-  <div class="section-banner">
+
+  <div class="section-banner combo">
 
     <div class="section-content">
-      <h2>Best Value Combo</h2>
-      <p>Great taste. Greater value.</p>
+
+      <h2>
+        Best Value Combo
+      </h2>
+
+      <p>
+        Great taste. Greater value.
+      </p>
+
     </div>
 
-    <button class="view-all" onclick="scrollToSection('combos')">
+
+    <button
+      class="view-all"
+      onclick="scrollToSection('combos')">
+
       View All →
+
     </button>
 
   </div>
 
+
   <div class="menu-items">
 
-    <div class="menu-item popular"
-         data-search="egg rice noodles soda nannari sarbath combo">
+
+    <div
+      class="menu-item popular"
+      data-search="veg rice noodles">
+
       <div class="item-name">
-        Egg Rice / Noodles + Soda Nannari Sarbath
-        <span class="badge">VALUE</span>
+
+        Veg Rice or Noodles
+
+        <span class="badge value-badge">
+          VALUE
+        </span>
+
       </div>
-      <div class="item-price">₹100</div>
+
+      <div class="item-price">
+        ₹120
+      </div>
+
     </div>
 
-    <div class="menu-item popular"
-         data-search="chicken rice noodles soda nannari sarbath combo">
+
+    <div
+      class="menu-item popular"
+      data-search="egg rice noodles">
+
       <div class="item-name">
-        Chicken Rice / Noodles + Soda Nannari Sarbath
-        <span class="badge">VALUE</span>
+
+        Egg Rice or Noodles
+
+        <span class="badge value-badge">
+          VALUE
+        </span>
+
       </div>
-      <div class="item-price">₹130</div>
+
+      <div class="item-price">
+        ₹130
+      </div>
+
     </div>
 
-    <div class="menu-item"
-         data-search="chicken rice noodles plain nannari sarbath combo">
+
+    <div
+      class="menu-item popular"
+      data-search="chicken rice noodles">
+
       <div class="item-name">
-        Chicken Rice / Noodles + Plain Nannari Sarbath
+
+        Chicken Rice or Noodles
+
+        <span class="badge value-badge">
+          VALUE
+        </span>
+
       </div>
-      <div class="item-price">₹120</div>
+
+      <div class="item-price">
+        ₹150
+      </div>
+
+    </div>
+
+
+    <div
+      class="menu-item"
+      data-search="mushroom rice noodles">
+
+      <div class="item-name">
+        Mushroom Rice or Noodles
+      </div>
+
+      <div class="item-price">
+        ₹140
+      </div>
+
     </div>
 
   </div>
@@ -2447,45 +2312,109 @@ body{
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      6. DRINKS
-========================= -->
+===================================================== -->
 
-<section class="menu-section" id="drinks">
+<section
+  class="menu-section drinks-section"
+  id="drinks">
 
-  <div class="section-banner">
+
+  <div class="section-banner drinks">
 
     <div class="section-content">
-      <h2>Drinks (Beverages)</h2>
-      <p>Coolers to complete your meal</p>
+
+      <h2>
+        Drinks (Beverages)
+      </h2>
+
+      <p>
+        Coolers to complete your meal
+      </p>
+
     </div>
 
-    <button class="view-all" onclick="scrollToSection('drinks')">
+
+    <button
+      class="view-all"
+      onclick="scrollToSection('drinks')">
+
       View All →
+
     </button>
 
   </div>
 
+
   <div class="menu-items">
 
-    <div class="menu-item" data-search="blue curacao mojito">
-      <div class="item-name">Blue Curacao Mojito</div>
-      <div class="item-price">₹80</div>
+
+    <!-- BLUE CURACAO -->
+
+    <div
+      class="menu-item"
+      data-search="blue curacao mojito">
+
+      <div class="item-name">
+        Blue Curacao Mojito
+      </div>
+
+      <div class="item-price">
+        ₹70
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="strawberry mojito">
-      <div class="item-name">Strawberry Mojito</div>
-      <div class="item-price">₹80</div>
+
+    <!-- STRAWBERRY -->
+
+    <div
+      class="menu-item"
+      data-search="strawberry mojito">
+
+      <div class="item-name">
+        Strawberry Mojito
+      </div>
+
+      <div class="item-price">
+        ₹80
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="plain nannari sarbath">
-      <div class="item-name">Plain Nannari Sarbath</div>
-      <div class="item-price">₹40</div>
+
+    <!-- PLAIN NANNARI -->
+
+    <div
+      class="menu-item"
+      data-search="plain nannari sarbath">
+
+      <div class="item-name">
+        Plain Nannari Sarbath
+      </div>
+
+      <div class="item-price">
+        ₹50
+      </div>
+
     </div>
 
-    <div class="menu-item" data-search="soda nannari sarbath">
-      <div class="item-name">Soda Nannari Sarbath</div>
-      <div class="item-price">₹50</div>
+
+    <!-- SODA NANNARI -->
+
+    <div
+      class="menu-item"
+      data-search="soda nannari sarbath">
+
+      <div class="item-name">
+        Soda Nannari Sarbath
+      </div>
+
+      <div class="item-price">
+        ₹60
+      </div>
+
     </div>
 
   </div>
@@ -2493,19 +2422,27 @@ body{
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer class="footer">
 
   <div class="footer-line">
+
     <span></span>
+
     Good Food Brings People Together
+
     <span></span>
+
   </div>
 
-  <strong>MMVK Chaat & Fast Food</strong>
+
+  <strong>
+    MMVK Chaat & Fast Food
+  </strong>
+
 
   <p>
     Kumaran Street, 62, Palladam Road,
@@ -2513,46 +2450,236 @@ body{
     Tamil Nadu 642001
   </p>
 
-  <p>📞 093847 61099</p>
 
   <p>
-    © MMVK Chaat & Fast Food. All Rights Reserved.
+    📞 093847 61099
+  </p>
+
+
+  <p>
+    © MMVK Chaat & Fast Food.
+    All Rights Reserved.
   </p>
 
 </footer>
 
+
 </div>
 
 
-<!-- =========================
-     SEARCH JAVASCRIPT
-========================= -->
+<!-- =====================================================
+     JAVASCRIPT
+     OFFLINE SEARCH + NAVIGATION
+===================================================== -->
 
 <script>
 
-const searchInput = document.getElementById("searchInput");
-const items = document.que<div class="item"><span>Egg Noodles</span><span class="price">₹80</span></div><div class="item"><span>Chicken Noodles</span><span class="price">₹100</span></div>
-<div class="item"><span>Mushroom Rice / Noodles</span><span class="price">₹90</span></div></section>
+/* =====================================================
+   SEARCH
+===================================================== */
 
-<section><h2>🍗 Starters</h2>
-<div class="item"><span>Chicken 65 — Bone, 100 g</span><span class="price">₹60</span></div><div class="item"><span>Chicken 65 — Boneless, 100 g</span><span class="price">₹70</span></div></section>
-<section class="fire"><h2>🔥 Korean Fire</h2>
-<div class="item"><span>Korean Fire Chicken Rice</span><span class="price">₹120</span></div>
-<div class="item"><span>Korean Fire Chicken Noodles</span><span class="price">₹120</span></div>
-<div class="item"><span>Korean Fire Egg Rice</span><span class="price">₹110</span></div>
-<div class="item"><span>Korean Fire Egg Noodles</span><span class="price">₹110</span></div>
-<div class="item"><span>Korean Fire Veg Rice</span><span class="price">₹100</span></div>
-<div class="item"><span>Korean Fire Veg Noodles</span><span class="price">₹100</span></div>
-<div class="item"><span>Korean Fire Chicken 65 — Bone, 100 g</span><span class="price">₹100</span></div>
-<div class="item"><span>Korean Fire Chicken 65 — Boneless, 100 g</span><span class="price">₹110</span></div>
-</section>
-<section><h2>🥤 Mojitos & Sarbath</h2>
-<div class="item"><span>Blue Curacao Mojito</span><span class="price">₹80</span></div><div class="item"><span>Strawberry Mojito</span><span class="price">₹80</span></div>
-<div class="item"><span>Plain Nannari Sarbath</span><span class="price">₹40</span></div><div class="item"><span>Soda Nannari Sarbath</span><span class="price">₹50</span></div></section>
+const searchInput =
+  document.getElementById("searchInput");
 
-<section class="combo"><h2>🔥 Value Combos</h2>
-<div class="item"><span>Egg Rice / Noodles + Soda Nannari Sarbath</span><span class="price">₹100</span></div>
-<div class="item"><span>Chicken Rice / Noodles + Soda Nannari Sarbath</span><span class="price">₹130</span></div>
-<div class="item"><span>Chicken Rice / Noodles + Plain Nannari Sarbath</span><span class="price">₹120</span></div></section>
-<footer>MMVK Chaat & Fast Food<br>Kumaran Street, 62, Palladam Road, Marapettai, Pollachi, Tamil Nadu 642001<br>093847 61099</footer>
-</main></body></html>
+const items =
+  document.querySelectorAll(".menu-item");
+
+const sections =
+  document.querySelectorAll(".menu-section");
+
+const noResults =
+  document.getElementById("noResults");
+
+
+searchInput.addEventListener(
+  "input",
+  function(){
+
+    const query =
+      this.value
+        .toLowerCase()
+        .trim();
+
+    let found = 0;
+
+
+    items.forEach(
+      function(item){
+
+        const searchableText =
+          (
+            item.innerText +
+            " " +
+            (
+              item.dataset.search || ""
+            )
+          )
+          .toLowerCase();
+
+
+        if(
+          query === "" ||
+          searchableText.includes(query)
+        ){
+
+          item.style.display =
+            "flex";
+
+          found++;
+
+        }else{
+
+          item.style.display =
+            "none";
+
+        }
+
+      }
+    );
+
+
+    /*
+      Hide sections that have no
+      matching items.
+    */
+
+    sections.forEach(
+      function(section){
+
+        const sectionItems =
+          section.querySelectorAll(
+            ".menu-item"
+          );
+
+        let visible = 0;
+
+
+        sectionItems.forEach(
+          function(item){
+
+            if(
+              item.style.display !==
+              "none"
+            ){
+
+              visible++;
+
+            }
+
+          }
+        );
+
+
+        if(
+          query !== "" &&
+          visible === 0
+        ){
+
+          section.style.display =
+            "none";
+
+        }else{
+
+          section.style.display =
+            "block";
+
+        }
+
+      }
+    );
+
+
+    if(
+      query !== "" &&
+      found === 0
+    ){
+
+      noResults.style.display =
+        "block";
+
+    }else{
+
+      noResults.style.display =
+        "none";
+
+    }
+
+  }
+);
+
+
+/* =====================================================
+   SCROLL TO CATEGORY
+===================================================== */
+
+function scrollToSection(id){
+
+  const section =
+    document.getElementById(id);
+
+
+  if(section){
+
+    section.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+  }
+
+}
+
+
+/* =====================================================
+   CATEGORY ACTIVE STATE
+===================================================== */
+
+const categoryLinks =
+  document.querySelectorAll(
+    ".category"
+  );
+
+
+categoryLinks.forEach(
+  function(link){
+
+    link.addEventListener(
+      "click",
+      function(){
+
+        categoryLinks.forEach(
+          function(item){
+            item.classList.remove(
+              "active"
+            );
+          }
+        );
+
+        this.classList.add(
+          "active"
+        );
+
+      }
+    );
+
+  }
+);
+
+
+/* =====================================================
+   CLEAR SEARCH WHEN PAGE IS RELOADED
+===================================================== */
+
+window.addEventListener(
+  "pageshow",
+  function(){
+
+    searchInput.value = "";
+
+  }
+);
+
+</script>
+
+</body>
+</html>
