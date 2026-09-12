@@ -7,19 +7,30 @@
 <title>MMVK Chaat & Fast Food | Menu</title>
 
 <style>
+
+/* =========================================================
+   MMVK CHaat & Fast Food
+   Premium Offline Menu
+   ========================================================= */
+
 :root{
-  --bg:#0d0f11;
-  --bg2:#15181b;
-  --card:#171a1d;
-  --card2:#1d2024;
-  --text:#ffffff;
-  --muted:#b9bdc2;
+  --bg:#0b0d0f;
+  --bg-soft:#111416;
+  --card:#16191c;
+  --card-light:#1c2024;
+  --line:#2b3035;
+
+  --white:#ffffff;
+  --text:#f5f5f5;
+  --muted:#b8bdc3;
+
   --red:#ef3340;
-  --red2:#ff4754;
-  --line:#2b2f34;
+  --red-dark:#c92532;
+
   --green:#20b85a;
-  --blue:#2867e8;
-  --yellow:#f5c542;
+  --blue:#2166e8;
+
+  --gold:#f3c94b;
 }
 
 *{
@@ -33,8 +44,1461 @@ html{
 body{
   margin:0;
   background:
-    radial-gradient(circle at top left,rgba(239,51,64,.08),transparent 30%),
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(239,51,64,.13),
+      transparent 35%
+    ),
     var(--bg);
+
+  color:var(--text);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height:1.45;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.container{
+  width:min(1180px,100%);
+  margin:auto;
+  padding:0 22px 50px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  padding:24px 0 20px;
+}
+
+.brand{
+  flex:1;
+}
+
+.brand-title{
+  display:flex;
+  align-items:center;
+  gap:9px;
+
+  font-size:38px;
+  font-weight:900;
+
+  letter-spacing:-1.5px;
+}
+
+.brand-fire{
+  color:var(--red);
+  font-size:34px;
+}
+
+.brand-name{
+  color:white;
+}
+
+.brand-sub{
+  margin-top:3px;
+
+  color:#b9bdc2;
+
+  font-size:13px;
+  font-weight:700;
+
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search-box{
+  position:relative;
+  width:370px;
+}
+
+.search-box input{
+  width:100%;
+  height:56px;
+
+  border-radius:30px;
+
+  border:1px solid #343a40;
+
+  background:#171a1d;
+
+  color:white;
+
+  padding:
+    0 20px 0 53px;
+
+  font-size:16px;
+
+  outline:none;
+}
+
+.search-box input::placeholder{
+  color:#969ba1;
+}
+
+.search-box input:focus{
+  border-color:var(--red);
+}
+
+.search-icon{
+  position:absolute;
+
+  left:19px;
+  top:15px;
+
+  font-size:22px;
+
+  pointer-events:none;
+}
+
+/* =========================================================
+   TOP MENU BUTTON
+   ========================================================= */
+
+.top-menu-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  background:var(--red);
+  color:white;
+
+  text-decoration:none;
+
+  padding:16px 24px;
+
+  border-radius:30px;
+
+  font-size:17px;
+  font-weight:800;
+
+  white-space:nowrap;
+
+  transition:.2s;
+}
+
+.top-menu-btn:hover{
+  background:var(--red-dark);
+  transform:translateY(-2px);
+}
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.actions{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:12px;
+
+  margin:8px 0 22px;
+}
+
+.action{
+  min-height:60px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:7px;
+
+  border-radius:16px;
+
+  border:1px solid var(--line);
+
+  background:var(--card);
+
+  color:white;
+
+  text-decoration:none;
+
+  font-size:16px;
+  font-weight:800;
+
+  transition:.2s;
+}
+
+.action:hover{
+  transform:translateY(-2px);
+  border-color:#555b61;
+}
+
+.action.call{
+  background:#171a1d;
+}
+
+.action.whatsapp{
+  background:#159548;
+  border-color:#159548;
+}
+
+.action.directions{
+  background:#155bd6;
+  border-color:#155bd6;
+}
+
+.action.online{
+  background:var(--red);
+  border-color:var(--red);
+}
+
+/* =========================================================
+   OFFLINE NOTICE
+   ========================================================= */
+
+.notice{
+  background:#15181b;
+
+  border:1px solid var(--line);
+
+  border-radius:16px;
+
+  padding:15px 18px;
+
+  color:#bfc4c9;
+
+  font-size:14px;
+
+  margin-bottom:25px;
+}
+
+.notice strong{
+  color:white;
+}
+
+/* =========================================================
+   EXPLORE MENU
+   ========================================================= */
+
+.explore-title{
+  margin-bottom:14px;
+
+  font-size:19px;
+  font-weight:900;
+}
+
+.categories{
+  display:flex;
+
+  gap:14px;
+
+  overflow-x:auto;
+
+  padding-bottom:9px;
+
+  scrollbar-width:none;
+}
+
+.categories::-webkit-scrollbar{
+  display:none;
+}
+
+.category{
+  position:relative;
+
+  flex:0 0 155px;
+
+  height:145px;
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  padding:13px;
+
+  border-radius:20px;
+
+  border:1px solid var(--line);
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,.06),
+      transparent 65%
+    ),
+    #15181b;
+
+  color:white;
+
+  text-decoration:none;
+
+  transition:.2s;
+
+  overflow:hidden;
+}
+
+.category::after{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 50%,
+      rgba(255,255,255,.035)
+    );
+
+  pointer-events:none;
+}
+
+.category:hover{
+  transform:translateY(-3px);
+
+  border-color:#555b61;
+}
+
+.category.active{
+  border:2px solid var(--red);
+
+  box-shadow:
+    0 0 20px rgba(239,51,64,.12);
+}
+
+.category.fire{
+  background:
+    radial-gradient(
+      circle,
+      rgba(239,51,64,.18),
+      transparent 65%
+    ),
+    #15181b;
+}
+
+.category.combo{
+  background:
+    radial-gradient(
+      circle,
+      rgba(243,201,75,.13),
+      transparent 65%
+    ),
+    #15181b;
+}
+
+.category.drink{
+  background:
+    radial-gradient(
+      circle,
+      rgba(32,184,90,.14),
+      transparent 65%
+    ),
+    #15181b;
+}
+
+.category-icon{
+  font-size:40px;
+
+  margin-bottom:9px;
+
+  filter:
+    drop-shadow(
+      0 4px 8px rgba(0,0,0,.35)
+    );
+}
+
+.category-name{
+  font-size:15px;
+
+  font-weight:800;
+
+  line-height:1.2;
+}
+
+/* =========================================================
+   SECTION BANNERS
+   ========================================================= */
+
+.menu-section{
+  margin-top:27px;
+
+  scroll-margin-top:18px;
+}
+
+.section-banner{
+  position:relative;
+
+  min-height:150px;
+
+  display:flex;
+  align-items:center;
+
+  padding:28px 38px;
+
+  overflow:hidden;
+
+  border-radius:20px;
+
+  border:1px solid var(--line);
+
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(255,255,255,.06),
+      transparent 35%
+    ),
+    linear-gradient(
+      105deg,
+      #15181a,
+      #0e1012
+    );
+}
+
+/*
+ Decorative food-style glow.
+ Keeps the page fully offline with no external images.
+*/
+
+.section-banner::after{
+  content:"";
+
+  position:absolute;
+
+  right:-30px;
+  top:-50px;
+
+  width:330px;
+  height:250px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(239,51,64,.18),
+      rgba(239,51,64,.03) 45%,
+      transparent 70%
+    );
+
+  pointer-events:none;
+}
+
+.section-banner.rice::before{
+  content:"🍚";
+
+  position:absolute;
+
+  right:65px;
+  top:32px;
+
+  font-size:105px;
+
+  opacity:.85;
+
+  filter:
+    drop-shadow(
+      0 10px 18px rgba(0,0,0,.45)
+    );
+}
+
+.section-banner.starters::before{
+  content:"🍗";
+
+  position:absolute;
+
+  right:65px;
+  top:32px;
+
+  font-size:100px;
+
+  opacity:.9;
+
+  filter:
+    drop-shadow(
+      0 10px 18px rgba(0,0,0,.45)
+    );
+}
+
+.section-banner.korean::before{
+  content:"🔥";
+
+  position:absolute;
+
+  right:65px;
+  top:30px;
+
+  font-size:100px;
+
+  filter:
+    drop-shadow(
+      0 8px 15px rgba(239,51,64,.35)
+    );
+}
+
+.section-banner.chaat::before{
+  content:"🥣";
+
+  position:absolute;
+
+  right:65px;
+  top:32px;
+
+  font-size:100px;
+
+  filter:
+    drop-shadow(
+      0 10px 18px rgba(0,0,0,.45)
+    );
+}
+
+.section-banner.combo::before{
+  content:"🍱";
+
+  position:absolute;
+
+  right:65px;
+  top:32px;
+
+  font-size:100px;
+}
+
+.section-banner.drinks::before{
+  content:"🥤";
+
+  position:absolute;
+
+  right:65px;
+  top:30px;
+
+  font-size:100px;
+}
+
+.section-content{
+  position:relative;
+
+  z-index:2;
+
+  max-width:66%;
+}
+
+.section-content h2{
+  margin:0;
+
+  padding-left:20px;
+
+  border-left:7px solid var(--red);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:31px;
+
+  line-height:1.15;
+}
+
+.section-content p{
+  margin:10px 0 0 27px;
+
+  color:#b9bec3;
+
+  font-size:16px;
+}
+
+/* =========================================================
+   VIEW ALL
+   ========================================================= */
+
+.view-all{
+  position:absolute;
+
+  right:18px;
+  bottom:18px;
+
+  z-index:5;
+
+  border:0;
+
+  background:var(--red);
+
+  color:white;
+
+  border-radius:25px;
+
+  padding:11px 18px;
+
+  font-size:14px;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.view-all:hover{
+  background:var(--red-dark);
+  transform:translateY(-2px);
+}
+
+/* =========================================================
+   SPECIAL SECTION COLORS
+   ========================================================= */
+
+.korean-section .section-banner{
+  background:
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(239,51,64,.18),
+      transparent 35%
+    ),
+    #151315;
+}
+
+.combo-section .section-banner{
+  background:
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(243,201,75,.12),
+      transparent 35%
+    ),
+    #161514;
+}
+
+.drinks-section .section-banner{
+  background:
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(32,184,90,.13),
+      transparent 35%
+    ),
+    #131716;
+}
+
+/* =========================================================
+   MENU ITEMS
+   ========================================================= */
+
+.menu-items{
+  margin-top:8px;
+
+  background:#111315;
+
+  border:1px solid var(--line);
+
+  border-radius:16px;
+
+  overflow:hidden;
+}
+
+.menu-item{
+  min-height:67px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:18px;
+
+  padding:17px 20px;
+
+  border-bottom:1px solid #292d31;
+
+  transition:.15s;
+}
+
+.menu-item:last-child{
+  border-bottom:none;
+}
+
+.menu-item:hover{
+  background:#191c20;
+}
+
+.item-name{
+  color:#f2f3f4;
+
+  font-size:16px;
+
+  font-weight:600;
+}
+
+.item-price{
+  color:white;
+
+  font-size:17px;
+
+  font-weight:900;
+
+  white-space:nowrap;
+}
+
+.menu-item.popular{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(239,51,64,.075),
+      transparent 65%
+    );
+}
+
+.badge{
+  display:inline-block;
+
+  margin-left:7px;
+
+  padding:3px 7px;
+
+  border-radius:10px;
+
+  background:#421e23;
+
+  color:#ff8990;
+
+  font-size:9px;
+
+  font-weight:900;
+
+  vertical-align:middle;
+}
+
+.value-badge{
+  background:#493c17;
+
+  color:#f5d76d;
+}
+
+/* =========================================================
+   SEARCH RESULT STATE
+   ========================================================= */
+
+.no-results{
+  display:none;
+
+  margin-top:25px;
+
+  padding:35px 20px;
+
+  text-align:center;
+
+  border:1px solid var(--line);
+
+  border-radius:16px;
+
+  background:#141719;
+
+  color:#9ea4aa;
+
+  font-size:16px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer{
+  padding:50px 15px 10px;
+
+  text-align:center;
+
+  color:#969ca2;
+
+  font-size:14px;
+}
+
+.footer-line{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:15px;
+
+  margin-bottom:16px;
+}
+
+.footer-line span{
+  width:32px;
+
+  height:1px;
+
+  background:var(--red);
+}
+
+.footer strong{
+  color:white;
+
+  font-size:16px;
+}
+
+.footer p{
+  margin:6px 0;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:700px){
+
+  .container{
+    padding:
+      0 15px
+      35px;
+  }
+
+  .header{
+    display:block;
+
+    padding:
+      20px 0
+      15px;
+  }
+
+  .brand-title{
+    font-size:31px;
+  }
+
+  .brand-fire{
+    font-size:28px;
+  }
+
+  .brand-sub{
+    font-size:10px;
+
+    letter-spacing:1.5px;
+  }
+
+  .search-box{
+    width:100%;
+
+    margin-top:17px;
+  }
+
+  .top-menu-btn{
+    display:none;
+  }
+
+  .actions{
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:10px;
+
+    margin-top:8px;
+  }
+
+  .action{
+    min-height:62px;
+
+    border-radius:15px;
+
+    font-size:14px;
+  }
+
+  .notice{
+    font-size:13px;
+
+    padding:14px 15px;
+  }
+
+  .explore-title{
+    font-size:18px;
+  }
+
+  .category{
+    flex-basis:135px;
+
+    height:125px;
+  }
+
+  .category-icon{
+    font-size:34px;
+  }
+
+  .category-name{
+    font-size:13px;
+  }
+
+  .menu-section{
+    margin-top:23px;
+  }
+
+  .section-banner{
+    min-height:145px;
+
+    padding:
+      22px 20px;
+  }
+
+  .section-content{
+    max-width:100%;
+
+    padding-right:70px;
+  }
+
+  .section-content h2{
+    font-size:24px;
+
+    padding-left:14px;
+
+    border-left-width:5px;
+  }
+
+  .section-content p{
+    margin-left:19px;
+
+    font-size:13px;
+  }
+
+  .section-banner::before{
+    right:8px;
+    top:34px;
+
+    font-size:72px;
+  }
+
+  .section-banner::after{
+    right:-80px;
+
+    width:240px;
+  }
+
+  .view-all{
+    right:12px;
+    bottom:12px;
+
+    padding:9px 13px;
+
+    font-size:12px;
+  }
+
+  .menu-item{
+    padding:
+      15px 14px;
+
+    min-height:63px;
+  }
+
+  .item-name{
+    font-size:15px;
+  }
+
+  .item-price{
+    font-size:16px;
+  }
+
+  .badge{
+    display:block;
+
+    width:max-content;
+
+    margin:
+      5px 0 0;
+  }
+
+  .footer{
+    padding-top:40px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media(max-width:380px){
+
+  .brand-title{
+    font-size:27px;
+  }
+
+  .action{
+    font-size:13px;
+  }
+
+  .category{
+    flex-basis:128px;
+  }
+
+  .section-content h2{
+    font-size:21px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+  <div class="brand">
+
+    <div class="brand-title">
+      <span class="brand-fire">🔥</span>
+      <span class="brand-name">MMVK</span>
+    </div>
+
+    <div class="brand-sub">
+      Chaat & Fast Food • Pollachi
+    </div>
+
+  </div>
+
+
+  <!-- SEARCH -->
+
+  <div class="search-box">
+
+    <span class="search-icon">🔎</span>
+
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="Search for dishes..."
+      autocomplete="off"
+    >
+
+  </div>
+
+
+  <a
+    href="#menu"
+    class="top-menu-btn">
+
+    🍴 Menu
+
+  </a>
+
+</header>
+
+
+<!-- =====================================================
+     MMVK ACTION BUTTONS
+===================================================== -->
+
+<div class="actions">
+
+
+  <!-- CALL -->
+
+  <a
+    class="action call"
+    href="tel:+919384761099">
+
+    📞 Call MMVK
+
+  </a>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    class="action whatsapp"
+    href="https://wa.me/919384761099?text=Hi%20MMVK%2C%20I%20would%20like%20to%20know%20today%27s%20menu."
+    target="_blank">
+
+    💬 WhatsApp
+
+  </a>
+
+
+  <!-- DIRECTIONS -->
+
+  <a
+    class="action directions"
+    href="https://www.google.com/maps/search/?api=1&query=MMVK+Chaat+%26+Fast+Food%2C+62+Kumaran+Street%2C+Palladam+Road%2C+Marapettai%2C+Pollachi%2C+Tamil+Nadu+642001"
+    target="_blank">
+
+    📍 Directions
+
+  </a>
+
+
+  <!-- ORDER ONLINE -->
+
+  <a
+    class="action online"
+    href="https://www.google.com/search?q=MMVK+Chaat+%26+Fast+Food+Pollachi+order+online"
+    target="_blank">
+
+    🛵 Order Online
+
+  </a>
+
+</div>
+
+
+<!-- =====================================================
+     OFFLINE PRICE NOTICE
+===================================================== -->
+
+<div class="notice">
+
+  <strong>Offline prices shown here.</strong>
+
+  Delivery-platform prices may be different because of
+  platform fees and offers.
+
+</div>
+
+
+<!-- =====================================================
+     CATEGORY NAVIGATION
+     EXACT ONLINE ORDER
+===================================================== -->
+
+<div id="menu">
+
+  <div class="explore-title">
+    Explore Menu
+  </div>
+
+
+  <div class="categories">
+
+
+    <!-- 1 -->
+
+    <a
+      href="#rice"
+      class="category active">
+
+      <div class="category-icon">
+        🍚
+      </div>
+
+      <div class="category-name">
+        Fried Rice<br>
+        & Noodles
+      </div>
+
+    </a>
+
+
+    <!-- 2 -->
+
+    <a
+      href="#starters"
+      class="category">
+
+      <div class="category-icon">
+        🍗
+      </div>
+
+      <div class="category-name">
+        Starters
+      </div>
+
+    </a>
+
+
+    <!-- 3 -->
+
+    <a
+      href="#korean"
+      class="category fire">
+
+      <div class="category-icon">
+        🔥
+      </div>
+
+      <div class="category-name">
+        Korean Fire
+      </div>
+
+    </a>
+
+
+    <!-- 4 -->
+
+    <a
+      href="#chaat"
+      class="category">
+
+      <div class="category-icon">
+        🥣
+      </div>
+
+      <div class="category-name">
+        Snacks<br>
+        & Chaat
+      </div>
+
+    </a>
+
+
+    <!-- 5 -->
+
+    <a
+      href="#combos"
+      class="category combo">
+
+      <div class="category-icon">
+        🍱
+      </div>
+
+      <div class="category-name">
+        Best Value<br>
+        Combo
+      </div>
+
+    </a>
+
+
+    <!-- 6 -->
+
+    <a
+      href="#drinks"
+      class="category drink">
+
+      <div class="category-icon">
+        🥤
+      </div>
+
+      <div class="category-name">
+        Drinks<br>
+        (Beverages)
+      </div>
+
+    </a>
+
+
+  </div>
+
+</div>
+
+
+<!-- SEARCH NO RESULTS -->
+
+<div
+  id="noResults"
+  class="no-results">
+
+  No menu items found.
+
+</div>
+
+
+<!-- =====================================================
+     1. FRIED RICE & NOODLES
+===================================================== -->
+
+<section
+  class="menu-section"
+  id="rice">
+
+
+  <div class="section-banner rice">
+
+    <div class="section-content">
+
+      <h2>
+        Fried Rice and Noodles
+      </h2>
+
+      <p>
+        Deliciously wok-tossed Chinese classics
+      </p>
+
+    </div>
+
+
+    <button
+      class="view-all"
+      onclick="scrollToSection('rice')">
+
+      View All →
+
+    </button>
+
+  </div>
+
+
+  <div class="menu-items">
+
+
+    <!-- VEG RICE -->
+
+    <div
+      class="menu-item"
+      data-search="veg rice">
+
+      <div class="item-name">
+        Veg Rice
+      </div>
+
+      <div class="item-price">
+        ₹80
+      </div>
+
+    </div>
+
+
+    <!-- VEG RICE HALF -->
+
+    <div
+      class="menu-item"
+      data-search="veg rice half 1/2">
+
+      <div class="item-name">
+        Veg Rice — 1/2
+      </div>
+
+      <div class="item-price">
+        ₹40
+      </div>
+
+    </div>
+
+
+    <!-- VEG NOODLES -->
+
+    <div
+      class="menu-item"
+      data-search="veg noodles">
+
+      <div class="item-name">
+        Veg Noodles
+      </div>
+
+      <div class="item-price">
+        ₹80
+      </div>
+
+    </div>
+
+
+    <!-- VEG NOODLES HALF -->
+
+    <div
+      class="menu-item"
+      data-search="veg noodles half 1/2">
+
+      <div class="item-name">
+        Veg Noodles — 1/2
+      </div>
+
+      <div class="item-price">
+        ₹40
+      </div>
+
+    </div>
+
+
+    <!-- VEG MAGGIE -->
+
+    <div
+      class="menu-item"
+      data-search="veg maggie">
+
+      <div class="item-name">
+        Veg Maggie
+      </div>
+
+      <div class="item-price">
+        ₹60
+      </div>
+
+    </div>
+
+
+    <!-- EGG RICE -->
+
+    <div
+      class="menu-item"
+      data-search="egg rice">
+
+      <div class="item-name">
+        Egg Rice
+      </div>
+
+      <div class="item-price">
+        ₹90
+      </div>
+
+    </div>
+
+
+    <!-- EGG RICE HALF -->
+
+    <div
+      class="menu-item"
+      data-search="egg rice half 1/2">
+
+      <div class="item-name">
+        Egg Rice — 1/2
+      </div>
+
+      <div class="item-price">
+        ₹45
+      </div>
+
+    </div>
+
+
+    <!-- EGG NOODLES -->
+
+    <div
+      class="menu-item"
+      data-search="egg noodles">
+
+      <div class="item-name">
+        Egg Noodles
+      </div>
+
+      <div class="item-price">
+        ₹90
+      </div>
+
+    </div>
+
+
+    <!-- EGG NOODLES HALF -->
+
+    <div
+      class="menu-item"
+      data-search="egg noodles half 1/2">
+
+      <div class="item-name">
+        Egg Noodles — 1/2
+      </div>
+
+      <div class="item-price">
+        ₹45
+      </div>
+
+    </div>
+
+
+     var(--bg);
   color:var(--text);
   font-family:Arial,Helvetica,sans-serif;
 }
