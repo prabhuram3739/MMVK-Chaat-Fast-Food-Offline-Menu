@@ -475,8 +475,8 @@ async function verifyAccess(){
         API + "/orders",
         {
           headers:{
-            "Authorization":
-              "Bearer " + staffKey
+            "X-Order-Board-Key":
+  staffKey
           }
         }
       );
@@ -537,8 +537,8 @@ async function loadOrders(){
         API + "/orders",
         {
           headers:{
-            "Authorization":
-              "Bearer " + staffKey
+           "X-Order-Board-Key":
+  staffKey
           }
         }
       );
@@ -985,8 +985,8 @@ async function changeStatus(orderNumber,status){
             "Content-Type":
               "application/json",
 
-            "Authorization":
-              "Bearer " + staffKey
+            "X-Order-Board-Key":
+  staffKey
           },
 
           body:JSON.stringify({
@@ -1091,8 +1091,8 @@ async function markPaid(orderNumber){
             "Content-Type":
               "application/json",
 
-            "Authorization":
-              "Bearer " + staffKey
+            "X-Order-Board-Key":
+  staffKey
           },
 
           body:JSON.stringify({
